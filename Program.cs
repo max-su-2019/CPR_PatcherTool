@@ -3,6 +3,8 @@ using WindowsFormsApp1;
 
 namespace CPR_PatcherTool
 {
+    public enum FileType { weaponEquip, weaponUnequip, SCAR, ALL };
+
     internal static class Program
     {
         [DllImport("kernel32.dll")]
@@ -20,17 +22,11 @@ namespace CPR_PatcherTool
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
+            Application.Run(new FilePathWindow());
             Application.Run(new CPR_Form());
 
         }
 
-        static string SelectPath() //弹出一个选择文件的对话框
-        {
-            var path = new FolderBrowserDialog();
-            if (path.ShowDialog() == DialogResult.OK)
-                return path.SelectedPath;
-
-            return string.Empty;
-        }
+        static public string[] files = new string[(int)FileType.ALL];
     }
 }

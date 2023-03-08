@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBoxAdvance = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,6 +71,7 @@ namespace WindowsFormsApp1
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.label18 = new System.Windows.Forms.Label();
             this.processButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBoxAdvance.SuspendLayout();
             this.groupBoxBackoff.SuspendLayout();
             this.groupBoxCircling.SuspendLayout();
@@ -491,8 +493,10 @@ namespace WindowsFormsApp1
             this.listBox1.ItemHeight = 17;
             this.listBox1.Location = new System.Drawing.Point(655, 129);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(336, 412);
+            this.listBox1.Size = new System.Drawing.Size(827, 412);
             this.listBox1.TabIndex = 5;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.listBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBox1_MouseMove);
             // 
             // label18
             // 
@@ -507,9 +511,9 @@ namespace WindowsFormsApp1
             // processButton
             // 
             this.processButton.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.processButton.Location = new System.Drawing.Point(746, 20);
+            this.processButton.Location = new System.Drawing.Point(655, 12);
             this.processButton.Name = "processButton";
-            this.processButton.Size = new System.Drawing.Size(171, 58);
+            this.processButton.Size = new System.Drawing.Size(171, 66);
             this.processButton.TabIndex = 6;
             this.processButton.Text = "Start Patching";
             this.processButton.UseVisualStyleBackColor = true;
@@ -520,7 +524,7 @@ namespace WindowsFormsApp1
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1047, 594);
+            this.ClientSize = new System.Drawing.Size(1494, 586);
             this.Controls.Add(this.processButton);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.listBox1);
@@ -591,6 +595,7 @@ namespace WindowsFormsApp1
         private Label label18;
 
         private Button processButton;
+        private ToolTip toolTip1;
     }
 }
 
