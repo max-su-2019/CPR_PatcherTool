@@ -1,0 +1,3 @@
+F:\Mod_Tools_Project\CPR_PatcherTool\bin\Release\net6.0-windows\publish\CPR_PatcherTool.pdb
+F:\Mod_Tools_Project\CPR_PatcherTool\bin\Release\net6.0-windows\publish\CPR_PatcherTool.dll.config
+F:\Mod_Tools_Project\CPR_PatcherTool\bin\Release\net6.0-windows\publish\CPR_PatcherTool.exe
