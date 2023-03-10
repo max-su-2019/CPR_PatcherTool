@@ -36,3 +36,5 @@ F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Debug\net6.0-windows\CPR_PatcherToo
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Debug\net6.0-windows\CPR_PatcherTool.genruntimeconfig.cache
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Debug\net6.0-windows\ref\CPR_PatcherTool.dll
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Debug\net6.0-windows\WindowsFormsApp1.CPR_Form.resources
+F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Debug\net6.0-windows\CPR_PatcherTool.MessageBoxWithDetails.resources
+F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Debug\net6.0-windows\CPR_PatcherTool.Properties.Resources.resources

@@ -28,12 +28,12 @@ namespace WindowsFormsApp1
             {
                 if (annoHandler.UpdateCPRAnnotations(Program.files[(int)FileType.weaponUnequip], new CPRAnnotation("CPR.DisableAll")))
                 {
-                    MessageBox.Show("Patched CPR Moveset Successfully!", "Result", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    MessageBoxWithDetails.Show("Patched CPR Moveset Successfully, Click the \"Details\" button to check file annotations", "Result", annoHandler.Output);
                     return;
                 }
             }
 
-            MessageBox.Show("Patched CPR Moveset Fail!", "Result", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBoxWithDetails.Show("Error: Patched CPR Moveset Fail!", "Result", annoHandler.Output);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

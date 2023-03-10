@@ -1,8 +1,15 @@
 ﻿
+using System.Diagnostics;
+using System.Reflection.Metadata;
+
 namespace CPR_PatcherTool
 {
     internal sealed class CPRAnnoHandler : hkannoHandler
     {
+        private string? output;
+
+        public string? Output { get => output; }
+
         private void InsertAnnotations(List<CPRAnnotation> annoArr)
         {
             Func<string, List<CPRAnnotation>, bool> shouldWrite = (string line, List<CPRAnnotation> annoArr) =>
@@ -42,16 +49,29 @@ namespace CPR_PatcherTool
 
         public bool UpdateCPRAnnotations(string fileName, List<CPRAnnotation> CPR_annoArr)
         {
+            bool result = false;
+
             if (CPR_annoArr.Count == 0)
-                return false;
+                return result;
 
             if (ParseAnnoFromFile(fileName))
             {
                 InsertAnnotations(CPR_annoArr);
-                return UpdateFileAnno(fileName);
+                result = UpdateFileAnno(fileName);
             }
 
-            return false;
+            if (result)
+            {
+                output += string.Format(Path.GetFileName(fileName) + ":\r\n" + AnnoStr);
+                output += "\r\n";
+            }
+            else
+            {
+                StreamReader logReader = new StreamReader("hkanno64.log");
+                output = logReader.ReadToEnd();
+            }
+
+            return result;
         }
     }
 }

@@ -4,6 +4,7 @@ namespace CPR_PatcherTool
 {
     public partial class FilePathWindow : Form
     {
+        public bool isContinue = false;
 
         private Dictionary<Button, Tuple<ListBox, FileType>> filesSelecterMap;
 
@@ -41,11 +42,17 @@ namespace CPR_PatcherTool
             {
                 if (string.IsNullOrEmpty(filePath))
                 {
-                    MessageBox.Show("Not File Select!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Not enough Files Selected!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (Program.files.GroupBy(x => x).Any(g => g.Count() > 1))
+                {
+                    MessageBox.Show("Repated Files Selected!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }
 
+            isContinue = true;
             Close();
         }
     }
