@@ -6,7 +6,6 @@ F:\Mod_Tools_Project\CPR_PatcherTool\bin\x86\Release\net6.0-windows\CPR_PatcherT
 F:\Mod_Tools_Project\CPR_PatcherTool\bin\x86\Release\net6.0-windows\CPR_PatcherTool.pdb
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.csproj.AssemblyReference.cache
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.FilePathWindow.resources
-F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\WindowsFormsApp1.Form1.resources
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.csproj.GenerateResource.cache
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.GeneratedMSBuildEditorConfig.editorconfig
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.AssemblyInfoInputs.cache
@@ -17,3 +16,6 @@ F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\refint\CPR_P
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.pdb
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.genruntimeconfig.cache
 F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\ref\CPR_PatcherTool.dll
+F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\WindowsFormsApp1.CPR_Form.resources
+F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.MessageBoxWithDetails.resources
+F:\Mod_Tools_Project\CPR_PatcherTool\obj\x86\Release\net6.0-windows\CPR_PatcherTool.Properties.Resources.resources
