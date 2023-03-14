@@ -6,10 +6,6 @@ namespace CPR_PatcherTool
 {
     internal sealed class CPRAnnoHandler : hkannoHandler
     {
-        private string? output;
-
-        public string? Output { get => output; }
-
         private void InsertAnnotations(List<CPRAnnotation> annoArr)
         {
             Func<string, List<CPRAnnotation>, bool> shouldWrite = (string line, List<CPRAnnotation> annoArr) =>
@@ -60,17 +56,7 @@ namespace CPR_PatcherTool
                 result = UpdateFileAnno(fileName);
             }
 
-            if (result)
-            {
-                output += string.Format(Path.GetFileName(fileName) + ":\r\n" + AnnoStr);
-                output += "\r\n";
-            }
-            else
-            {
-                StreamReader logReader = new StreamReader("hkanno64.log");
-                output = logReader.ReadToEnd();
-            }
-
+            UpdateLog(fileName, result);
             return result;
         }
     }

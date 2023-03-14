@@ -26,6 +26,10 @@ internal class hkannoHandler
         get { return annoStr; }
     }
 
+    private string? output;
+
+    public string? Output { get => output; }
+
     public hkannoHandler() { }
 
     public hkannoHandler(in string a_annoStr)
@@ -61,6 +65,20 @@ internal class hkannoHandler
             return false;
 
         return UpdateAnnotations(annoStr, ofileName);
+    }
+
+    protected void UpdateLog(in string fileName, in bool result)
+    {
+        if (result)
+        {
+            output += (Path.GetFileName(fileName) + ":\r\n" + AnnoStr);
+            output += "\r\n";
+        }
+        else
+        {
+            StreamReader logReader = new StreamReader("hkanno64.log");
+            output = logReader.ReadToEnd();
+        }
     }
 }
 

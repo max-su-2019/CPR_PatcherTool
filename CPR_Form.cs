@@ -7,8 +7,13 @@ namespace WindowsFormsApp1
         public CPR_Form()
         {
             InitializeComponent();
-            SCARAnnoHandler handler = new SCARAnnoHandler();
-            var refData = handler.GetSCARActionData(Program.files[(int)FileType.SCAR]);
+            SCARAnnoHandler annoHandler = new SCARAnnoHandler();
+            var refData = annoHandler.GetSCARActionData(Program.files[(int)FileType.SCAR]);
+            if (refData.Count == 0)
+            {
+                MessageBoxWithDetails.Show("Error: Parse Dummy Animation File Failed!", "Result", annoHandler.Output);
+            }
+
             foreach (var item in refData)
             {
                 listBox1.Items.Add(item);
@@ -33,7 +38,7 @@ namespace WindowsFormsApp1
                 }
             }
 
-            MessageBoxWithDetails.Show("Error: Patched CPR Moveset Fail!", "Result", annoHandler.Output);
+            MessageBoxWithDetails.Show("Error: Patched CPR Moveset Failed!", "Result", annoHandler.Output);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)

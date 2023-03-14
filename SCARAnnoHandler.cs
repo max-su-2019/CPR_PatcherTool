@@ -21,6 +21,8 @@ namespace CPR_PatcherTool
                 }
             }
 
+            UpdateLog(ifileName, result.Count > 0);
+
             return result;
         }
     }
